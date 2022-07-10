@@ -1,0 +1,705 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": 123456,
+      "roleState": true,
+      "default": true,
+      "region": "",
+      "roleId": 1
+    },
+    {
+      "username": "admin2",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "亞洲",
+      "roleId": 2,
+      "id": 2
+    },
+    {
+      "username": "admin3",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "南極洲",
+      "roleId": 2,
+      "id": 3
+    },
+    {
+      "username": "admin4",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "亞洲",
+      "roleId": 2,
+      "id": 4
+    },
+    {
+      "username": "editor",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "南極洲",
+      "roleId": 3,
+      "id": 5
+    },
+    {
+      "username": "editor2",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "南極洲",
+      "roleId": 3,
+      "id": 6
+    },
+    {
+      "username": "editor3",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "亞洲",
+      "roleId": 3,
+      "id": 7
+    },
+    {
+      "username": "editor4",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "亞洲",
+      "roleId": 3,
+      "id": 8
+    },
+    {
+      "username": "test",
+      "password": "1",
+      "region": "南極洲",
+      "roleId": 2,
+      "roleState": true,
+      "default": false,
+      "id": 9
+    },
+    {
+      "username": "test12",
+      "password": "123",
+      "region": "亞洲",
+      "roleId": 3,
+      "roleState": true,
+      "default": false,
+      "id": 10
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "roleName": "超級管理員",
+      "roleType": 1,
+      "rights": [
+        "/user-manage",
+        "/user-manage/add",
+        "/user-manage/delete",
+        "/user-manage/update",
+        "/user-manage/list",
+        "/right-manage",
+        "/right-manage/role/list",
+        "/right-manage/right/list",
+        "/right-manage/role/update",
+        "/right-manage/role/delete",
+        "/right-manage/right/update",
+        "/right-manage/right/delete",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/news-manage/category",
+        "/audit-manage",
+        "/audit-manage/audit",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset",
+        "/home"
+      ]
+    },
+    {
+      "id": 2,
+      "roleName": "區域管理員",
+      "roleType": 2,
+      "rights": [
+        "/home",
+        "/user-manage",
+        "/user-manage/add",
+        "/user-manage/delete",
+        "/user-manage/update",
+        "/user-manage/list",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/news-manage/category",
+        "/audit-manage",
+        "/audit-manage/audit",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset"
+      ]
+    },
+    {
+      "id": 3,
+      "roleName": "區域编輯",
+      "roleType": 3,
+      "rights": [
+        "/home",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/audit-manage",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset"
+      ]
+    }
+  ],
+  "children": [
+    {
+      "id": 3,
+      "title": "添加用户",
+      "rightId": 2,
+      "key": "/user-manage/add",
+      "grade": 2
+    },
+    {
+      "id": 4,
+      "title": "删除用户",
+      "rightId": 2,
+      "key": "/user-manage/delete",
+      "grade": 2
+    },
+    {
+      "id": 5,
+      "title": "修改用户",
+      "rightId": 2,
+      "key": "/user-manage/update",
+      "grade": 2
+    },
+    {
+      "id": 6,
+      "title": "用户列表",
+      "rightId": 2,
+      "key": "/user-manage/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 8,
+      "title": "角色列表",
+      "rightId": 7,
+      "key": "/right-manage/role/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 9,
+      "title": "權限列表",
+      "rightId": 7,
+      "key": "/right-manage/right/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 10,
+      "title": "修改角色",
+      "rightId": 7,
+      "key": "/right-manage/role/update",
+      "grade": 2
+    },
+    {
+      "id": 11,
+      "title": "删除角色",
+      "rightId": 7,
+      "key": "/right-manage/role/delete",
+      "grade": 2
+    },
+    {
+      "id": 12,
+      "title": "修改權限",
+      "rightId": 7,
+      "key": "/right-manage/right/update",
+      "grade": 2
+    },
+    {
+      "id": 13,
+      "title": "删除權限",
+      "rightId": 7,
+      "key": "/right-manage/right/delete",
+      "grade": 2
+    },
+    {
+      "id": 15,
+      "title": "新聞列表",
+      "rightId": 14,
+      "key": "/news-manage/list",
+      "grade": 2
+    },
+    {
+      "id": 16,
+      "title": "撰寫新聞",
+      "rightId": 14,
+      "key": "/news-manage/add",
+      "grade": 2,
+      "pagepermisson": 1
+    },
+    {
+      "id": 17,
+      "title": "新聞更新",
+      "rightId": 14,
+      "key": "/news-manage/update/:id",
+      "grade": 2,
+      "routepermisson": 1
+    },
+    {
+      "id": 18,
+      "title": "新聞預覽",
+      "rightId": 14,
+      "key": "/news-manage/preview/:id",
+      "grade": 2,
+      "routepermisson": 1
+    },
+    {
+      "id": 19,
+      "title": "草稿箱",
+      "rightId": 14,
+      "key": "/news-manage/draft",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 20,
+      "title": "新聞分類",
+      "rightId": 14,
+      "key": "/news-manage/category",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 22,
+      "title": "審核新聞",
+      "rightId": 21,
+      "key": "/audit-manage/audit",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 23,
+      "title": "審核列表",
+      "rightId": 21,
+      "key": "/audit-manage/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 25,
+      "title": "待發佈",
+      "rightId": 24,
+      "key": "/publish-manage/unpublished",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 26,
+      "title": "已發佈",
+      "rightId": 24,
+      "key": "/publish-manage/published",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 27,
+      "title": "已下線",
+      "rightId": 24,
+      "key": "/publish-manage/sunset",
+      "pagepermisson": 1,
+      "grade": 2
+    }
+  ],
+  "rights": [
+    {
+      "id": 1,
+      "title": "首頁",
+      "key": "/home",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 2,
+      "title": "用户管理",
+      "key": "/user-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 7,
+      "title": "權限管理",
+      "key": "/right-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 14,
+      "title": "新聞管理",
+      "key": "/news-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 21,
+      "title": "審核管理",
+      "key": "/audit-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 24,
+      "title": "發佈管理",
+      "key": "/publish-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "時事新聞",
+      "value": "時事新聞"
+    },
+    {
+      "id": 2,
+      "title": "財經新聞",
+      "value": "財經新聞"
+    },
+    {
+      "id": 3,
+      "title": "科學技術",
+      "value": "科學技術"
+    },
+    {
+      "id": 4,
+      "title": "環球政治",
+      "value": "環球政治"
+    },
+    {
+      "id": 5,
+      "title": "世界體育",
+      "value": "世界體育"
+    },
+    {
+      "id": 6,
+      "title": "生活消費",
+      "value": "生活消費"
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "title": "亞洲",
+      "value": "亞洲"
+    },
+    {
+      "id": 2,
+      "title": "歐洲",
+      "value": "歐洲"
+    },
+    {
+      "id": 3,
+      "title": "北美洲",
+      "value": "北美洲"
+    },
+    {
+      "id": 4,
+      "title": "南美洲",
+      "value": "南美洲"
+    },
+    {
+      "id": 5,
+      "title": "非洲",
+      "value": "非洲"
+    },
+    {
+      "id": 6,
+      "title": "大洋洲",
+      "value": "大洋洲"
+    },
+    {
+      "id": 7,
+      "title": "南極洲",
+      "value": "南極洲"
+    }
+  ],
+  "news": [
+    {
+      "title": "JavaScript",
+      "categoryId": 3,
+      "content": "<p>JavaScript</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615777743864,
+      "star": 500,
+      "view": 606,
+      "id": 1,
+      "publishTime": 1657379223533
+    },
+    {
+      "title": "Hello World",
+      "categoryId": 1,
+      "content": "<p>Hello World</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778694831,
+      "star": 503,
+      "view": 816,
+      "id": 2,
+      "publishTime": 1656604800000
+    },
+    {
+      "title": "Redux",
+      "categoryId": 2,
+      "content": "<p>Redux</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778715619,
+      "star": 310,
+      "view": 984,
+      "id": 3,
+      "publishTime": 1656950400000
+    },
+    {
+      "title": "React.js",
+      "categoryId": 3,
+      "content": "<p>React.js</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778740202,
+      "star": 2000,
+      "view": 3000,
+      "id": 4,
+      "publishTime": 1657123200000
+    },
+    {
+      "title": "JSON Server",
+      "categoryId": 4,
+      "content": "<p>JSON Server</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778777924,
+      "star": 400,
+      "view": 701,
+      "id": 5,
+      "publishTime": 1657123200000
+    },
+    {
+      "title": "Testing",
+      "categoryId": 4,
+      "content": "<p>Testing</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778808893,
+      "star": 300,
+      "view": 654,
+      "id": 6,
+      "publishTime": 1657209600000
+    },
+    {
+      "title": "HTML/CSS",
+      "categoryId": 5,
+      "content": "<p>HTML/CSS</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778852584,
+      "star": 309,
+      "view": 479,
+      "id": 7,
+      "publishTime": 1656950400000
+    },
+    {
+      "title": "TEST",
+      "categoryId": 6,
+      "content": "<p>TEST</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778891518,
+      "star": 301,
+      "view": 301,
+      "id": 8,
+      "publishTime": 1656950400000
+    },
+    {
+      "title": "測試",
+      "categoryId": 3,
+      "content": "<p>測試</p>\n",
+      "region": "",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1616203436307,
+      "star": 1,
+      "view": 6,
+      "id": 9,
+      "publishTime": 1616203519274
+    },
+    {
+      "title": "test",
+      "categoryId": 6,
+      "content": "<p>test</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1656859073825,
+      "star": 0,
+      "view": 0,
+      "id": 10,
+      "publishTime": 1657123200000
+    },
+    {
+      "title": "test1",
+      "categoryId": 5,
+      "content": "<h3>test1</h3>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 3,
+      "publishState": 2,
+      "createTime": 1656885059843,
+      "star": 0,
+      "view": 0,
+      "id": 11,
+      "publishTime": 1657209600000
+    },
+    {
+      "title": "test2",
+      "categoryId": 5,
+      "content": "<h3>test2</h3>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 3,
+      "publishState": 3,
+      "createTime": 1656885059843,
+      "star": 0,
+      "view": 0,
+      "id": 12
+    },
+    {
+      "title": "test3",
+      "categoryId": 5,
+      "content": "<h3>test3</h3>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 3,
+      "publishState": 1,
+      "createTime": 1656885059843,
+      "star": 0,
+      "view": 0,
+      "id": 13
+    },
+    {
+      "title": "test4",
+      "categoryId": 4,
+      "content": "<p>test4</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1657059156666,
+      "star": 0,
+      "view": 0,
+      "id": 14,
+      "publishTime": 1657059168111
+    },
+    {
+      "title": "test5",
+      "categoryId": 4,
+      "content": "<p>test5</p>\n",
+      "region": "亞洲",
+      "author": "admin2",
+      "roleId": 2,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1657322277856,
+      "star": 0,
+      "view": 0,
+      "id": 15,
+      "publishTime": 1657322289203
+    },
+    {
+      "title": "testx",
+      "categoryId": 1,
+      "content": "<p>testx</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1657380880610,
+      "star": 0,
+      "view": 0,
+      "id": 16
+    },
+    {
+      "title": "try",
+      "categoryId": 2,
+      "content": "<p>try</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 1,
+      "publishState": 0,
+      "createTime": 1657381823002,
+      "star": 0,
+      "view": 0,
+      "id": 17
+    }
+  ]
+}
