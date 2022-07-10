@@ -19,24 +19,6 @@
       "id": 2
     },
     {
-      "username": "admin3",
-      "password": "123",
-      "roleState": true,
-      "default": false,
-      "region": "南極洲",
-      "roleId": 2,
-      "id": 3
-    },
-    {
-      "username": "admin4",
-      "password": "123",
-      "roleState": true,
-      "default": false,
-      "region": "亞洲",
-      "roleId": 2,
-      "id": 4
-    },
-    {
       "username": "editor",
       "password": "123",
       "roleState": true,
@@ -53,42 +35,6 @@
       "region": "南極洲",
       "roleId": 3,
       "id": 6
-    },
-    {
-      "username": "editor3",
-      "password": "123",
-      "roleState": true,
-      "default": false,
-      "region": "亞洲",
-      "roleId": 3,
-      "id": 7
-    },
-    {
-      "username": "editor4",
-      "password": "123",
-      "roleState": true,
-      "default": false,
-      "region": "亞洲",
-      "roleId": 3,
-      "id": 8
-    },
-    {
-      "username": "test",
-      "password": "1",
-      "region": "南極洲",
-      "roleId": 2,
-      "roleState": true,
-      "default": false,
-      "id": 9
-    },
-    {
-      "username": "test12",
-      "password": "123",
-      "region": "亞洲",
-      "roleId": 3,
-      "roleState": true,
-      "default": false,
-      "id": 10
     }
   ],
   "roles": [
@@ -628,78 +574,6 @@
       "star": 0,
       "view": 0,
       "id": 12
-    },
-    {
-      "title": "test3",
-      "categoryId": 5,
-      "content": "<h3>test3</h3>\n",
-      "region": "全球",
-      "author": "admin",
-      "roleId": 1,
-      "auditState": 3,
-      "publishState": 1,
-      "createTime": 1656885059843,
-      "star": 0,
-      "view": 0,
-      "id": 13
-    },
-    {
-      "title": "test4",
-      "categoryId": 4,
-      "content": "<p>test4</p>\n",
-      "region": "全球",
-      "author": "admin",
-      "roleId": 1,
-      "auditState": 2,
-      "publishState": 2,
-      "createTime": 1657059156666,
-      "star": 0,
-      "view": 0,
-      "id": 14,
-      "publishTime": 1657059168111
-    },
-    {
-      "title": "test5",
-      "categoryId": 4,
-      "content": "<p>test5</p>\n",
-      "region": "亞洲",
-      "author": "admin2",
-      "roleId": 2,
-      "auditState": 2,
-      "publishState": 2,
-      "createTime": 1657322277856,
-      "star": 0,
-      "view": 0,
-      "id": 15,
-      "publishTime": 1657322289203
-    },
-    {
-      "title": "testx",
-      "categoryId": 1,
-      "content": "<p>testx</p>\n",
-      "region": "全球",
-      "author": "admin",
-      "roleId": 1,
-      "auditState": 2,
-      "publishState": 1,
-      "createTime": 1657380880610,
-      "star": 0,
-      "view": 0,
-      "id": 16
-    },
-    {
-      "title": "try",
-      "categoryId": 2,
-      "content": "<p>try</p>\n",
-      "region": "全球",
-      "author": "admin",
-      "roleId": 1,
-      "auditState": 1,
-      "publishState": 0,
-      "createTime": 1657381823002,
-      "star": 0,
-      "view": 0,
-      "id": 17
     }
   ]
 }
